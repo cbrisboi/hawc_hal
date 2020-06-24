@@ -3,7 +3,7 @@ from astropy.wcs import WCS
 from astropy.wcs.utils import proj_plane_pixel_area
 import numpy as np
 
-from util import cartesian
+from .util import cartesian
 from hawc_hal.sphere_dist import sphere_dist
 
 

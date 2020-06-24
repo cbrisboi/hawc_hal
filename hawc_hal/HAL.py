@@ -466,7 +466,7 @@ class HAL(PluginPrototype):
             this_model_map_hpx = self._get_expectation(data_analysis_bin, bin_id, n_point_sources, n_ext_sources)
 
             # Now compare with observation
-            bkg_renorm = self._nuisance_parameters.values()[0].value
+            bkg_renorm = list(self._nuisance_parameters.values())[0].value
 
             obs = data_analysis_bin.observation_map.as_partial()  # type: np.array
             bkg = data_analysis_bin.background_map.as_partial() * bkg_renorm  # type: np.array
