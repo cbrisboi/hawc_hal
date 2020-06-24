@@ -1,7 +1,7 @@
 import numpy as np
 import astropy.units as u
 import healpy as hp
-from healpix_roi_base import HealpixROIBase, _RING, _NESTED
+from .healpix_roi_base import HealpixROIBase, _RING, _NESTED
 
 from astromodels.core.sky_direction import SkyDirection
 

@@ -9,7 +9,7 @@ from threeML.io.file_utils import file_existing_and_readable, sanitize_filename
 from threeML.exceptions.custom_exceptions import custom_warnings
 
 from ..psf_fast import PSFWrapper
-from response_bin import ResponseBin
+from .response_bin import ResponseBin
 
 _instances = {}
 
@@ -323,10 +323,10 @@ class HAWCResponse(object):
         print("Response file: %s" % self._response_file_name)
         print("Number of dec bins: %s" % len(self._dec_bins))
         if verbose:
-            print self._dec_bins
+            print(self._dec_bins)
         print("Number of energy/nHit planes per dec bin_name: %s" % (self.n_energy_planes))
         if verbose:
-            print self._response_bins.values()[0].keys()
+            print(self._response_bins.values()[0].keys())
 
     def write(self, filename):
         """
