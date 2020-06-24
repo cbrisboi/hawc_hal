@@ -138,7 +138,7 @@ class MapTree(object):
 
         display(df)
 
-        first_bin_id = self._analysis_bins.keys()[0]
+        first_bin_id = list(self._analysis_bins.keys())[0]
         print("This Map Tree contains %.3f transits in the first bin" \
             % self._analysis_bins[first_bin_id].n_transits)
         print("Total data size: %.2f Mb" % (size * u.byte).to(u.megabyte).value)
