@@ -311,7 +311,7 @@ class HAWCResponse(object):
     @property
     def n_energy_planes(self):
 
-        return len(self._response_bins.values()[0])
+        return len(list(self._response_bins.values())[0])
 
     def display(self, verbose=False):
         """
@@ -320,8 +320,8 @@ class HAWCResponse(object):
         :param verbose bool: Prints the full list of declinations and analysis bins.
         """
 
-        print("Response file: %s" % self._response_file_name)
-        print("Number of dec bins: %s" % len(self._dec_bins))
+        print("Response file: {0}".format(self._response_file_name))
+        print("Number of dec bins: {0}".format(len(list(self._dec_bins))))
         if verbose:
             print(self._dec_bins)
         print("Number of energy/nHit planes per dec bin_name: %s" % (self.n_energy_planes))
