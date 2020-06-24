@@ -6,7 +6,7 @@ from hawc_hal.region_of_interest import get_roi_from_dict
 from threeML.exceptions.custom_exceptions import custom_warnings
 
 from ..healpix_handling import SparseHealpix, DenseHealpix
-from data_analysis_bin import DataAnalysisBin
+from .data_analysis_bin import DataAnalysisBin
 
 
 def from_hdf5_file(map_tree_file, roi):

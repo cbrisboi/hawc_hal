@@ -6,8 +6,8 @@ from threeML.io.rich_display import display
 from threeML.io.file_utils import sanitize_filename
 
 from ..serialize import Serialization
-from from_root_file import from_root_file
-from from_hdf5_file import from_hdf5_file
+from .from_root_file import from_root_file
+from .from_hdf5_file import from_hdf5_file
 
 import astropy.units as u
 
