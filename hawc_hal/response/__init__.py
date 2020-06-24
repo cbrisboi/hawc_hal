@@ -1,1 +1,1 @@
-from response import hawc_response_factory
+from .response import hawc_response_factory
