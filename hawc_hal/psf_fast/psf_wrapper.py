@@ -59,8 +59,8 @@ class PSFWrapper(object):
 
         # Compute the density
 
-        interp_y = np.array(map(lambda (a, b): self.integral(a, b) / (np.pi * (b ** 2 - a ** 2)) / self._total_integral,
-                                zip(self._xs[:-1], self._xs[1:])))
+        interp_y = np.array([ (self.integral(a_b[0], a_b[1]) / (np.pi * (a_b[1] ** 2 - a_b[0] ** 2)) 
+                                / self._total_integral) for a_b in zip(self._xs[:-1], self._xs[1:])])
 
         # Add zero at r = _INTEGRAL_OUTER_RADIUS so that the extrapolated values will be correct
         interp_x = np.append(interp_x, [_INTEGRAL_OUTER_RADIUS])

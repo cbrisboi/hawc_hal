@@ -4,8 +4,8 @@ from numpy.fft import rfftn, irfftn
 from scipy.fftpack import helper
 
 
-from psf_interpolator import PSFInterpolator
-from psf_wrapper import PSFWrapper
+from .psf_interpolator import PSFInterpolator
+from .psf_wrapper import PSFWrapper
 
 
 class PSFConvolutor(object):
